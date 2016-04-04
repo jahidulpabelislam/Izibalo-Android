@@ -2209,7 +2209,7 @@ prx.types.image = {
        
         cR += '<div class="image-inner borderPos-'+prx.componentsHelper.getProp(item.borderPos,'other')+'">';
         
-        cR += '<div id="' + _id + '-img-wrapper" class="type-image-wrapper liveUpdate-borderColor changeProperty-borderColor changeProperty-borderRadius changeProperty-borderWidth ' + ((prx.componentsHelper.getProp(item.imgSrc.fileId.slice(-4),'other') == '.svg') ? ' type-image-svg' : '') + missingClass + ((prx.componentsHelper.getProp(item.repeat,'boolean')) ? ' type-image-repeater' : '')  + (fileType=='gif' ? ' gif' : '') + '" ' +
+        cR += '<div id="' + _id + '-img-wrapper" class="type-image-wrapper liveUpdate-borderColor changeProperty-borderColor changeProperty-borderRadius changeProperty-borderWidth ' + ((item.imgSrc.fileId !== undefined && prx.componentsHelper.getProp(item.imgSrc.fileId.slice(-4),'other') == '.svg') ? ' type-image-svg' : '') + missingClass + ((prx.componentsHelper.getProp(item.repeat,'boolean')) ? ' type-image-repeater' : '')  + (fileType=='gif' ? ' gif' : '') + '" ' +
         'style="background-image: url(' + wrapperBackground + ');">';
 
         cR += '<div></div>'
