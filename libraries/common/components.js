@@ -1023,7 +1023,8 @@ prx.types.text = {
 							    	'font-style': $('#'+item.id+' [data-editableproperty="text"]').css('font-style'),
 							    	width: 'auto',
 							        height: 'auto',
-							        marginLeft: '5px'
+							        marginLeft: '5px',
+								    'white-space': 'nowrap'
 							    })
                             .appendTo('body');
 
@@ -1035,6 +1036,7 @@ prx.types.text = {
 
 							$temp.remove();
 							prx.items.update(item);
+					        return item; // rerender properties
 		      			}
                 }, changeProperty: {
   						caption: 'Text font',
@@ -1066,7 +1068,8 @@ prx.types.text = {
 							    	'font-style': $('#'+item.id+' [data-editableproperty="text"]').css('font-style'),
 							    	width: 'auto',
 							        height: 'auto',
-							        marginLeft: '5px'
+							        marginLeft: '5px',
+								    'white-space': 'nowrap'
 							    })
 							    .appendTo('body')
 
@@ -1081,8 +1084,10 @@ prx.types.text = {
 							$temp.remove();
 							prx.items.update(item);
 
-				            $('#p-'+item.id+'-lineHeight').val(prx.data.items[prx.iSelectedIndex].lineHeight)
+				            $('#p-'+item.id+'-lineHeight').val(prx.data.items[prx.iSelectedIndex].lineHeight);
 
+				            return item; // rerender properties
+				        
 				            //prx.properties.popup.show();
 		      			//}
 		      			}
@@ -1132,7 +1137,8 @@ prx.types.text = {
 							    	'font-style': $('#'+item.id+' [data-editableproperty="text"]').css('font-style'),
 							    	width: 'auto',
 							        height: 'auto',
-							        marginLeft: '5px'
+							        marginLeft: '5px',
+								    'white-space': 'nowrap'
 							    })
 							    .appendTo('body')
 
@@ -1146,6 +1152,8 @@ prx.types.text = {
 
 							$temp.remove();
 							prx.items.update(item);
+
+					        return item; // rerender properties
 		      			}
 		      		},
 		      		changeProperty: {
@@ -1188,7 +1196,8 @@ prx.types.text = {
 								    'font-style': $('#'+item.id+' [data-editableproperty="text"]').css('font-style'),
 								    width: 'auto',
 								    height: 'auto',
-								    marginLeft: '5px'
+								    marginLeft: '5px',
+								    'white-space': 'nowrap'
 							    })
 							    .appendTo('body')
 
@@ -1202,6 +1211,8 @@ prx.types.text = {
 
 						    $temp.remove();
 						    prx.items.update(item);
+
+						    return item; // rerender properties
 					    }
 				    }
   				}
@@ -1244,7 +1255,8 @@ prx.types.text = {
 										'font-style': $('#'+item.id+' [data-editableproperty="text"]').css('font-style'),
 										width: 'auto',
 										height: 'auto',
-										marginLeft: '5px'
+										marginLeft: '5px',
+										'white-space': 'nowrap'
 									})
 									.appendTo('body')
 
@@ -1257,6 +1269,7 @@ prx.types.text = {
 
 								$temp.remove();
 								prx.items.update(item);
+
 							}
 							return item;
 						}
@@ -1295,7 +1308,8 @@ prx.types.text = {
 									    	'font-style': $('#'+item.id+' [data-editableproperty="text"]').css('font-style'),
 									    	width: 'auto',
 									        height: 'auto',
-									        marginLeft: '5px'
+									        marginLeft: '5px',
+										    'white-space': 'nowrap'
 									    })
 									    .appendTo('body')
 
@@ -1309,6 +1323,8 @@ prx.types.text = {
 									$temp.remove();
 									prx.items.update(item);
 				      			}
+
+						        return item; // rerender properties
 				      		},
 				      		changeProperty: {
 		  						caption: 'Fit to text',
